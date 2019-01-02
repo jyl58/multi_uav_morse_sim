@@ -3,7 +3,7 @@ current_pat=$(pwd)
 export PYTHONPATH=$PYTHONPATH:$current_pat/lib/
 
 echo "run the morse env"
-morse run ./env/multi_copter_env.py &
+screen -d -m morse run ./env/multi_copter_env.py 
 
 if [[ $? -ne 0 ]]; then
 	echo "morse run ERR!"	
@@ -11,7 +11,7 @@ if [[ $? -ne 0 ]]; then
 fi
 
 echo "run the copter sim firmware"
-./firmware/bin/ubuntu/arducopter -S -I0 --home -35.363261,149.165230,584,353 --model morse-quad --speedup 1 --defaults ../../uav-param/mav.parm  & 
+./firmware/bin/ubuntu/arducopter -S -I0 --home -35.363261,149.165230,584,353 --model morse-quad --speedup 1 --defaults ./firmware/uav-param/mav.parm 1>/dev/null & 
 
 if [[ $? -ne 0 ]]; then
 	echo "arducopter run ERR!"	
