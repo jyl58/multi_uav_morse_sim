@@ -1,6 +1,6 @@
 current_pat=$(pwd)
 
-export PYTHONPATH =$PYTHONPATH:$current_pat"/lib/"
+export PYTHONPATH=$PYTHONPATH:$current_pat/lib/
 
 echo "run the morse env"
 morse run ./env/multi_copter_env.py &
