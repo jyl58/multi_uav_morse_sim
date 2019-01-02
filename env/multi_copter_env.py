@@ -48,4 +48,4 @@ bpy.context.scene.game_settings.show_fullscreen=True
 env.properties(longitude = 149.165230, latitude = -35.363261, altitude = 584.0)
 
 #creat the sim env    
-env.create(sim_copter_list[2].get_sim_name())
+env.create(cf["sim_copter"]["sim_copter_name"])
