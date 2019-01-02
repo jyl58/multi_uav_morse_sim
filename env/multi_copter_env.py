@@ -1,5 +1,5 @@
 from morse.builder import *
-from copter import *
+from copterlib.copter import *
 import bpy
 import configparser
 
